@@ -20,9 +20,17 @@ const rendercomponent = () => {
 
 rendercomponent()
 
-if (module.hot) {
-  module.hot.accept('./components/layout.js', function() {
-    console.log('Accepting the updated module!');
-    rendercomponent();
-  })
+// This is apparently not working
+
+// if (module.hot) {
+//   module.hot.accept('./components/layout.js', function() {
+//     console.log('Accepting the updated module!');
+//     rendercomponent();
+//   })
+// }
+
+// This will work 
+if(module.hot) {
+  console.log('Updating')
+  module.hot.accept();
 }
