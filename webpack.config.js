@@ -20,12 +20,13 @@ module.exports = {
   ],
 
   devServer: {
-    contentBase: 'frontend/public/',
+    contentBase: path.join(__dirname, 'frontend/public/'),
     hot: true,
     port: 3000,
     historyApiFallback: true,
-    watchContentBase: true
+    publicPath: '/dist/'
   },
+  watch: true,
   
   devtool: 'inline-source-map',
   plugins: [
@@ -35,8 +36,8 @@ module.exports = {
   ],
   output: {
     filename: 'bundle.js',
-    path: path.join(__dirname, 'frontend/public/dist'),
-    publicPath: '/'
+    path: path.join(__dirname, 'frontend/public/dist/'),
+    publicPath: '/dist/'
   },
 
   module: {
@@ -59,6 +60,7 @@ module.exports = {
         test: /(?=\.jpe?g$)|(?=\.png$)|(?=\.gif$)|(?=\.svg$)/,
         use: {
           loader: 'file-loader'
+
         }
       },
     ]

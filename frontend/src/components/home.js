@@ -4,7 +4,7 @@ export default class Home extends Component {
   render () {
     console.log('inside Home');
     return (
-      <h1>Home</h1>
+      <h1>Hdme</h1>
     );
   }
 }

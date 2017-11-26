@@ -16,7 +16,7 @@ export default class Layout extends Component{
         <div className="main">
         <img src={img}/>
           <Navbar/>
-          <h1>React OMASDFADSLKADF Hello !!</h1>
+          <h1>React !!</h1>
           <Route exact path="/home" component={Home} />
           <Route exact path="/register" component={Register} />
           <Route exact path="/login" component={Login} />
